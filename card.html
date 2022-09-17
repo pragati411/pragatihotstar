@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="profiles">
+
+  </div>
+    
+</body>
+</html>
+<script>
+     const profileArr = [
+     
+    {
+      
+      firstName: "DAHAN",
+      profile: "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/385/1350385-v-48f2a37d426a",
+      
+      
+    },
+    {
+     firstName: "BAGHI",
+    profile:   "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/6535/846535-h",
+      
+      
+      
+    },
+  {
+    firstName: "CUTPUTTLI",
+    profile: "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_0_5x/sources/r1/cms/prod/6530/1326530-h-f2a7e4e4e3d6",
+  },
+  {
+    firstName: "CRIMINAL JUSTICE",
+    profile: "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3826/1323826-h-d2a900e9acb7",
+  },
+  {
+    firstName: "THOR",
+    profile: "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/8295/1328295-h-b05c8156e59a",
+  },
+  {
+    firstName: "HEAVEN",
+    profile: "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/9708/1319708-h-0c7201053e6e",
+  },
+  {
+    firstName: "HULK",
+    profile:  "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/7972/1317972-h-3217e6c47ab5",
+  },
+
+  ];
+  
+const profileContainer = document.getElementById("profiles");
+profileContainer.className = "profileContainer";
+profileContainer.style.display = "flex";
+profileContainer.style.flexWrap = "wrap";
+profileContainer.style.padding= "20px";
+profileContainer.style.marginLeft = "10px";
+profileContainer.style.gap = "20px";
+profileContainer.style.backgroundColor = ""
+
+
+
+
+  for (let i = 0; i < profileArr.length; i++) {
+    const cardContainer = document.createElement("div");
+    cardContainer.className = "card";
+  
+
+
+    
+    const imgContainer = document.createElement("img");
+    imgContainer.src = profileArr[i].profile;
+    imgContainer.width = 300;
+    imgContainer.height = 300;
+    cardContainer.appendChild(imgContainer);
+    cardContainer.style = "position:relative";
+    
+
+
+    
+    const nameContainer = document.createElement("p");
+    nameContainer.textContent = profileArr[i].firstName;
+    cardContainer.appendChild(nameContainer);
+    cardContainer.style.textAlign = "center";
+    cardContainer.style.color = "black";
+    cardContainer.style.fontSize = "20px";
+    cardContainer.style.lineHeight = "5px";
+    nameContainer.style.position = "absolute";
+    nameContainer.style = "top:200px";
+
+
+   
+    
+
+
+    profileContainer.appendChild(cardContainer);
+  }
+  
+
+</script>
